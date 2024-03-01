@@ -16,7 +16,7 @@ __ Take Off Toward Your Dream ! __
 void solve(char s)
 {
     // your solution
-    if (s >= 'a' && s <= 'b')
+    if (s >= 'a' && s <= 'z')
         s -= 32;
     else
         s += 32;
