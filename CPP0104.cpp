@@ -14,26 +14,19 @@ ________ Hoang Hoang Tuan ________
 __ Take Off Toward Your Dream ! __
 ............................... */
 
-void solve(char s)
-{
-    // your solution
-    if (s >= 'a' && s <= 'z')
-        s -= 32;
-    else
-        s += 32;
-    cout << s << endl;
-}
 int main()
 {
     ONLY_CPP
     // input
-    int t;
-    cin >> t;
-    while (t--)
+    long long n;
+    long long sum = 0;
+    long long s = 1;
+    cin >> n;
+    for (int i = 1; i <= n; i++)
     {
-        char c;
-        cin >> c;
-        solve(c);
+        s *= i;
+        sum += s;
     }
+    cout << sum;
     return 0;
 }

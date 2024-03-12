@@ -14,26 +14,26 @@ ________ Hoang Hoang Tuan ________
 __ Take Off Toward Your Dream ! __
 ............................... */
 
-void solve(char s)
+bool check(string s)
 {
-    // your solution
-    if (s >= 'a' && s <= 'z')
-        s -= 32;
-    else
-        s += 32;
-    cout << s << endl;
+    string s1 = s;
+    reverse(s.begin(), s.end());
+    return s == s1;
 }
 int main()
 {
-    ONLY_CPP
+    ONLY_CPP;
     // input
     int t;
     cin >> t;
     while (t--)
     {
-        char c;
-        cin >> c;
-        solve(c);
+        string s;
+        cin >> s;
+        if (check(s))
+            cout << "YES" << endl;
+        else
+            cout << "NO" << endl;
     }
     return 0;
 }

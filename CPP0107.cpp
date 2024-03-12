@@ -14,26 +14,29 @@ ________ Hoang Hoang Tuan ________
 __ Take Off Toward Your Dream ! __
 ............................... */
 
-void solve(char s)
-{
-    // your solution
-    if (s >= 'a' && s <= 'z')
-        s -= 32;
-    else
-        s += 32;
-    cout << s << endl;
-}
+string ans[105];
+
 int main()
 {
     ONLY_CPP
     // input
+    ans[101] = "0ABBADCCABDCCABD";
+    ans[102] = "0ACCABCDDBBCDDBB";
     int t;
     cin >> t;
     while (t--)
     {
+        int id;
+        cin >> id;
         char c;
-        cin >> c;
-        solve(c);
+        double point = 0;
+        for (int i = 1; i <= 15; i++)
+        {
+            cin >> c;
+            if (c == ans[id][i])
+                point++;
+        }
+        cout << fixed << setprecision(2) << point * 10 / 15 << endl;
     }
     return 0;
 }

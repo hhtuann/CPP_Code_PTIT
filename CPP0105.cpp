@@ -14,14 +14,16 @@ ________ Hoang Hoang Tuan ________
 __ Take Off Toward Your Dream ! __
 ............................... */
 
-void solve(char s)
+bool check(int n)
 {
-    // your solution
-    if (s >= 'a' && s <= 'z')
-        s -= 32;
-    else
-        s += 32;
-    cout << s << endl;
+    while (n)
+    {
+        int k = n % 10;
+        if (k != 8 && k != 6 && k != 0)
+            return 0;
+        n /= 10;
+    }
+    return 1;
 }
 int main()
 {
@@ -31,9 +33,12 @@ int main()
     cin >> t;
     while (t--)
     {
-        char c;
-        cin >> c;
-        solve(c);
+        int n;
+        cin >> n;
+        if (check(n))
+            cout << "YES" << endl;
+        else
+            cout << "NO" << endl;
     }
     return 0;
 }

@@ -13,16 +13,16 @@ hhtuann._
 ________ Hoang Hoang Tuan ________
 __ Take Off Toward Your Dream ! __
 ............................... */
-
-void solve(char s)
+bool check(string s)
 {
-    // your solution
-    if (s >= 'a' && s <= 'z')
-        s -= 32;
-    else
-        s += 32;
-    cout << s << endl;
+    for (int i = 1; i < s.size(); i++)
+    {
+        if (abs(s[i] - s[i - 1]) != 1)
+            return 0;
+    }
+    return 1;
 }
+
 int main()
 {
     ONLY_CPP
@@ -31,9 +31,12 @@ int main()
     cin >> t;
     while (t--)
     {
-        char c;
-        cin >> c;
-        solve(c);
+        string s;
+        cin >> s;
+        if (check(s))
+            cout << "YES" << endl;
+        else
+            cout << "NO" << endl;
     }
     return 0;
 }

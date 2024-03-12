@@ -14,15 +14,6 @@ ________ Hoang Hoang Tuan ________
 __ Take Off Toward Your Dream ! __
 ............................... */
 
-void solve(char s)
-{
-    // your solution
-    if (s >= 'a' && s <= 'z')
-        s -= 32;
-    else
-        s += 32;
-    cout << s << endl;
-}
 int main()
 {
     ONLY_CPP
@@ -31,9 +22,17 @@ int main()
     cin >> t;
     while (t--)
     {
-        char c;
-        cin >> c;
-        solve(c);
+        string s;
+        cin >> s;
+        for (int i = 0; i < s.size() - 2; i++)
+        {
+            if (s[i] == '0' && s[i + 1] == '8' && s[i + 2] == '4')
+            {
+                s.erase(i, 3);
+                break;
+            }
+        }
+        cout << s << endl;
     }
     return 0;
 }
