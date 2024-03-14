@@ -28,18 +28,18 @@ public:
     }
     void nhap()
     {
-        getline(cin, this->name);
-        cin >> this->clas >> this->dob;
+        getline(cin, name);
+        cin >> clas >> dob;
         cin >> gpa;
     }
     void xuat()
     {
-        if (this->dob[2] != '/')
-            this->dob = '0' + this->dob;
-        if (this->dob[5] != '/')
-            this->dob.insert(3, "0");
-        cout << this->msv << sp << this->name << sp << this->clas << sp << this->dob << sp;
-        cout << fixed << setprecision(2) << this->gpa;
+        if (dob[2] != '/')
+            dob = '0' + dob;
+        if (dob[5] != '/')
+            dob.insert(3, "0");
+        cout << msv << sp << name << sp << clas << sp << dob << sp;
+        cout << fixed << setprecision(2) << gpa;
     }
 };
 int main()
