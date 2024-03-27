@@ -1,19 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 #define LL long long
-#define hhtuan "hhtuann"
-#define sp " "
-#define ONLY_CPP                      \
-    ios_base::sync_with_stdio(false); \
-    cin.tie(NULL);                    \
-    cout.tie(NULL);
+#define hhtuann "hhtuann"
 #define inf int(1e9 + 7)
 #define nmax int(1e6 + 7)
-/* ...............................
-hhtuann._
-________ Hoang Hoang Tuan ________
-__ Take Off Toward Your Dream ! __
-............................... */
+
+// ig: hhtuann._
+// Hoang Hoang Tuan
+// Take Off Toward Your Dream !
 
 struct SinhVien
 {
@@ -33,7 +28,7 @@ void in(SinhVien &sv)
         sv.dob = "0" + sv.dob;
     if (sv.dob[5] != '/')
         sv.dob.insert(3, "0");
-    cout << sv.id << sp << sv.name << sp << sv.clas << sp << sv.dob << sp;
+    cout << sv.id << " " << sv.name << " " << sv.clas << " " << sv.dob << " ";
     cout << fixed << setprecision(2) << sv.gpa;
 }
 int main()

@@ -2,7 +2,7 @@
 using namespace std;
 
 #define LL long long
-#define name "hhtuann"
+#define hhtuann "hhtuann"
 #define inf int(1e9 + 7)
 #define nmax int(1e6 + 7)
 
