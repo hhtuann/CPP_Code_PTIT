@@ -1,0 +1,1 @@
+{"name":"Local: mailinh","url":"d:\\PTIT_Code\\CPP_Code_PTIT\\mailinh.cpp","tests":[{"id":1710449494742,"input":"3\n312\n12345 312\n312\n12345 6312","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\PTIT_Code\\CPP_Code_PTIT\\mailinh.cpp","group":"local","local":true}
