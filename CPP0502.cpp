@@ -1,14 +1,9 @@
+/***** CPP0502 *****/
 #include <bits/stdc++.h>
 using namespace std;
 
+#define NAME "Hoang Hoang Tuan"
 #define LL long long
-#define hhtuann "hhtuann"
-#define inf int(1e9 + 7)
-#define nmax int(1e6 + 7)
-
-// ig: hhtuann._
-// Hoang Hoang Tuan
-// Take Off Toward Your Dream !
 
 struct ThiSinh
 {
@@ -33,3 +28,4 @@ int main()
     in(A);
     return 0;
 }
+/* Take Off Toward Your Dream ! */

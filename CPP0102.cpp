@@ -1,37 +1,28 @@
+/***** CPP0102 *****/
 #include <bits/stdc++.h>
 using namespace std;
 
+#define NAME "Hoang Hoang Tuan"
 #define LL long long
-#define hhtuann "hhtuann"
-#define inf int(1e9 + 7)
-#define nmax int(1e6 + 7)
 
-// ig: hhtuann._
-// Hoang Hoang Tuan
-// Take Off Toward Your Dream !
-
-void solve(char s)
-{
-    // your solution
-    if (s >= 'a' && s <= 'z')
-        s -= 32;
-    else
-        s += 32;
-    cout << s << endl;
-}
-int main()
+signed main()
 {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    // input
+    cin.tie(nullptr);
+
     int t;
     cin >> t;
     while (t--)
     {
         char c;
         cin >> c;
-        solve(c);
+        if (islower(c))
+            cout << char(toupper(c));
+        else
+            cout << char(tolower(c));
+        cout << "\n";
     }
+
     return 0;
 }
+/* Take Off Toward Your Dream ! */

@@ -1,14 +1,9 @@
+/***** CPP0109 *****/
 #include <bits/stdc++.h>
 using namespace std;
 
+#define NAME "Hoang Hoang Tuan"
 #define LL long long
-#define hhtuann "hhtuann"
-#define inf int(1e9 + 7)
-#define nmax int(1e6 + 7)
-
-// ig: hhtuann._
-// Hoang Hoang Tuan
-// Take Off Toward Your Dream !
 
 bool check(int n)
 {
@@ -32,12 +27,11 @@ int pow10(int n)
         sum *= 10;
     return sum;
 }
-int main()
+signed main()
 {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    // input
+    cin.tie(nullptr);
+
     int n;
     cin >> n;
     int a = pow10(n - 1);
@@ -47,7 +41,7 @@ int main()
     {
         if (cnt == 10)
         {
-            cout << endl;
+            cout << "\n";
             cnt = 0;
         }
         if (check(i))
@@ -59,3 +53,4 @@ int main()
 
     return 0;
 }
+/* Take Off Toward Your Dream ! */

@@ -1,14 +1,9 @@
+/***** CPP0512 *****/
 #include <bits/stdc++.h>
 using namespace std;
 
+#define NAME "Hoang Hoang Tuan"
 #define LL long long
-#define hhtuann "hhtuann"
-#define inf int(1e9 + 7)
-#define nmax int(1e6 + 7)
-
-// ig: hhtuann._
-// Hoang Hoang Tuan
-// Take Off Toward Your Dream !
 
 struct PhanSo
 {
@@ -18,6 +13,10 @@ struct PhanSo
         LL gcd = __gcd(abs(tu), abs(mau));
         tu /= gcd;
         mau /= gcd;
+    }
+    void inra()
+    {
+        cout << tu << "/" << mau;
     }
     friend PhanSo operator+(PhanSo A, PhanSo B)
     {
@@ -34,10 +33,6 @@ struct PhanSo
         C.mau = A.mau * B.mau;
         C.rutgon();
         return C;
-    }
-    void inra()
-    {
-        cout << tu << "/" << mau;
     }
 };
 void process(PhanSo A, PhanSo B)
@@ -62,3 +57,4 @@ int main()
         process(A, B);
     }
 }
+/* Take Off Toward Your Dream ! */

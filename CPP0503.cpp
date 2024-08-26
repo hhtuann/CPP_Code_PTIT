@@ -1,14 +1,9 @@
+/***** CPP0503 *****/
 #include <bits/stdc++.h>
 using namespace std;
 
+#define NAME "Hoang Hoang Tuan"
 #define LL long long
-#define hhtuann "hhtuann"
-#define inf int(1e9 + 7)
-#define nmax int(1e6 + 7)
-
-// ig: hhtuann._
-// Hoang Hoang Tuan
-// Take Off Toward Your Dream !
 
 struct PhanSo
 {
@@ -18,7 +13,7 @@ void nhap(PhanSo &ps)
 {
     cin >> ps.a >> ps.b;
 }
-void in(PhanSo ps)
+void in(PhanSo &ps)
 {
     cout << ps.a << "/" << ps.b;
 }
@@ -36,3 +31,4 @@ int main()
     in(p);
     return 0;
 }
+/* Take Off Toward Your Dream ! */

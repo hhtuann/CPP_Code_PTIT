@@ -1,42 +1,33 @@
+/***** PROBLEM NAME *****/
 #include <bits/stdc++.h>
 using namespace std;
 
+#define NAME "Hoang Hoang Tuan"
 #define LL long long
-#define hhtuann "hhtuann"
-#define inf int(1e9 + 7)
-#define nmax int(1e6 + 7)
+#define __lcm(a, b) 1LL * (a * b) / __gcd(a, b);
 
-// ig: hhtuann._
-// Hoang Hoang Tuan
-// Take Off Toward Your Dream !
-
-LL f[1000000];
-LL lcm(LL a, LL b)
-{
-    return a * b / __gcd(a, b);
-}
-void solve()
+LL f[1000005];
+void calc()
 {
     f[0] = 1;
     for (LL i = 1; i < 1000000; i++)
-    {
-        f[i] = lcm(f[i - 1], i);
-    }
+        f[i] = __lcm(f[i - 1], i);
 }
-int main()
+signed main()
 {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    // input
-    solve();
+    cin.tie(nullptr);
+
+    calc();
     int t;
     cin >> t;
     while (t--)
     {
         int n;
         cin >> n;
-        cout << f[n] << endl;
+        cout << f[n] << "\n";
     }
+
     return 0;
 }
+/* Take Off Toward Your Dream ! */

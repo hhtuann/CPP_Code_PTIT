@@ -1,25 +1,18 @@
+/***** CPP0107 *****/
 #include <bits/stdc++.h>
 using namespace std;
 
+#define NAME "Hoang Hoang Tuan"
 #define LL long long
-#define hhtuann "hhtuann"
-#define inf int(1e9 + 7)
-#define nmax int(1e6 + 7)
 
-// ig: hhtuann._
-// Hoang Hoang Tuan
-// Take Off Toward Your Dream !
-
-string ans[105];
-
-int main()
+signed main()
 {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    // input
-    ans[101] = "0ABBADCCABDCCABD";
-    ans[102] = "0ACCABCDDBBCDDBB";
+    cin.tie(nullptr);
+
+    string ans[5];
+    ans[1] = "0ABBADCCABDCCABD";
+    ans[2] = "0ACCABCDDBBCDDBB";
     int t;
     cin >> t;
     while (t--)
@@ -31,10 +24,12 @@ int main()
         for (int i = 1; i <= 15; i++)
         {
             cin >> c;
-            if (c == ans[id][i])
+            if (c == ans[id - 100][i])
                 point++;
         }
-        cout << fixed << setprecision(2) << point * 10 / 15 << endl;
+        cout << fixed << setprecision(2) << point * 10 / 15 << "\n";
     }
+
     return 0;
 }
+/* Take Off Toward Your Dream ! */

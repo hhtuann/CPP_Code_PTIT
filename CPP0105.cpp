@@ -1,14 +1,9 @@
+/***** CPP0105 *****/
 #include <bits/stdc++.h>
 using namespace std;
 
+#define NAME "Hoang Hoang Tuan"
 #define LL long long
-#define hhtuann "hhtuann"
-#define inf int(1e9 + 7)
-#define nmax int(1e6 + 7)
-
-// ig: hhtuann._
-// Hoang Hoang Tuan
-// Take Off Toward Your Dream !
 
 bool check(int n)
 {
@@ -16,17 +11,16 @@ bool check(int n)
     {
         int k = n % 10;
         if (k != 8 && k != 6 && k != 0)
-            return 0;
+            return false;
         n /= 10;
     }
-    return 1;
+    return true;
 }
-int main()
+signed main()
 {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    // input
+    cin.tie(nullptr);
+
     int t;
     cin >> t;
     while (t--)
@@ -34,9 +28,12 @@ int main()
         int n;
         cin >> n;
         if (check(n))
-            cout << "YES" << endl;
+            cout << "YES";
         else
-            cout << "NO" << endl;
+            cout << "NO";
+        cout << "\n";
     }
+
     return 0;
 }
+/* Take Off Toward Your Dream ! */

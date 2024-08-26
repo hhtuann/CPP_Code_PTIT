@@ -1,27 +1,21 @@
+/***** CPP0106 *****/
 #include <bits/stdc++.h>
 using namespace std;
 
+#define NAME "Hoang Hoang Tuan"
 #define LL long long
-#define hhtuann "hhtuann"
-#define inf int(1e9 + 7)
-#define nmax int(1e6 + 7)
-
-// ig: hhtuann._
-// Hoang Hoang Tuan
-// Take Off Toward Your Dream !
 
 bool check(string s)
 {
-    string s1 = s;
+    string rs = s;
     reverse(s.begin(), s.end());
-    return s == s1;
+    return rs == s;
 }
-int main()
+signed main()
 {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    // input
+    cin.tie(nullptr);
+
     int t;
     cin >> t;
     while (t--)
@@ -29,9 +23,12 @@ int main()
         string s;
         cin >> s;
         if (check(s))
-            cout << "YES" << endl;
+            cout << "YES";
         else
-            cout << "NO" << endl;
+            cout << "NO";
+        cout << "\n";
     }
+
     return 0;
 }
+/* Take Off Toward Your Dream ! */
