@@ -28,10 +28,11 @@ bigInt operator-(bigInt a, bigInt b)
     {
         int mid = a[i] - b[i] - carry + 10;
         carry = (mid < 10) ? 1 : 0;
-        res = to_string(mid % 10) + res;
+        res.push_back(mid % 10 + '0');
     }
-    // while (res[0] == '0' && res.length() > 1)
-    //     res.erase(0, 1);
+    // while (res.back() == '0' && res.size() > 1)
+    //     res.pop_back();
+    reverse(res.begin(), res.end());
     return res;
 }
 signed main()
