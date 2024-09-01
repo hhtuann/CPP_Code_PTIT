@@ -13,19 +13,23 @@ signed main()
     cin >> t;
     while (t--)
     {
-        string s;
-        cin >> s;
-        for (int i = 0; i < s.size() - 2; i++)
+        int n, ok = 0, x;
+        cin >> n;
+        map<int, int> a;
+        for (int i = 0; i < n - 1; i++)
         {
-            if (s[i] == '0' && s[i + 1] == '8' && s[i + 2] == '4')
+            cin >> x;
+            a[x]++;
+        }
+        for (int i = 1; i <= n + 1; i++)
+        {
+            if (a[i] == 0)
             {
-                s.erase(i, 3);
+                cout << i << endl;
                 break;
             }
         }
-        cout << s << "\n";
     }
 
     return 0;
-}
-/* Take Off Toward Your Dream ! */
+} /* Take Off Toward Your Dream ! */

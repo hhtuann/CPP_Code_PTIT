@@ -1,11 +1,8 @@
-/***** CPP0423 *****/
 #include <bits/stdc++.h>
 using namespace std;
 
 #define NAME "Hoang Hoang Tuan"
 #define LL long long
-
-const int INF = 1e9 + 7;
 
 signed main()
 {
@@ -32,7 +29,7 @@ signed main()
                 v[i]++;
             }
         }
-        int ans = INF;
+        int ans = INT_MAX;
         for (int i = cnt; i <= n; i++)
             ans = min(ans, v[i] - v[i - cnt]);
         cout << ans << "\n";

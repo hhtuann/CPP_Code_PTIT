@@ -1,4 +1,3 @@
-/***** CPP0106 *****/
 #include <bits/stdc++.h>
 using namespace std;
 

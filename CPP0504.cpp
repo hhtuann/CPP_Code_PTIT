@@ -1,4 +1,3 @@
-/***** CPP0504 *****/
 #include <bits/stdc++.h>
 using namespace std;
 

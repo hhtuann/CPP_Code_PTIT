@@ -13,15 +13,16 @@ signed main()
     cin >> t;
     while (t--)
     {
-        char c;
-        cin >> c;
-        if (islower(c))
-            cout << char(toupper(c));
-        else
-            cout << char(tolower(c));
-        cout << "\n";
+        int n, k, ok = -1, x;
+        cin >> n >> k;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> x;
+            if (x == k)
+                ok = 1;
+        }
+        cout << ok << endl;
     }
 
     return 0;
-}
-/* Take Off Toward Your Dream ! */
+} /* Take Off Toward Your Dream ! */
