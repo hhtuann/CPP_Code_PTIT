@@ -4,6 +4,8 @@ using namespace std;
 #define NAME "Hoang Hoang Tuan"
 #define LL long long
 
+int a[] = {5, 20, 38, 50, 38, 20, 8, 5, 0};
+
 signed main()
 {
     ios_base::sync_with_stdio(false);
@@ -13,16 +15,11 @@ signed main()
     cin >> t;
     while (t--)
     {
-        int n, k, x, p;
-        cin >> n >> k;
-        for (int i = 0; i < n; i++)
-        {
-            cin >> x;
-            if (x == k)
-                p = i + 1;
-        }
-        cout << p << endl;
+        int n;
+        cin >> n;
+        cout << a[n - 1] << "\n";
     }
 
     return 0;
-} /* Take Off Toward Your Dream ! */
+}
+/* Take Off Toward Your Dream ! */

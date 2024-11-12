@@ -15,14 +15,15 @@ signed main()
     {
         int n, k;
         cin >> n >> k;
-        int a[n];
-        for (int i = 0; i < n; i++)
+
+        vector<int> a(n * n);
+        for (int i = 0; i < n * n; i++)
             cin >> a[i];
-        sort(a, a + n);
-        for (int i = n - 1; i >= n - k; i--)
-            cout << a[i] << " ";
-        cout << endl;
+
+        sort(a.begin(), a.end());
+        cout << a[k - 1] << "\n";
     }
 
     return 0;
-} /* Take Off Toward Your Dream ! */
+}
+/* Take Off Toward Your Dream ! */

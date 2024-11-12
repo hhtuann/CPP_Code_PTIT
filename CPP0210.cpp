@@ -13,20 +13,21 @@ signed main()
     cin >> t;
     while (t--)
     {
-        int n, s = 0;
+        int n;
         cin >> n;
-        long long a[n];
-        for (int i = 0; i < n; i++)
+
+        vector<int> a(n + 1);
+        int MIN = INT_MAX, ans = 0;
+        for (int i = 1; i <= n; i++)
         {
             cin >> a[i];
-            if (a[i] == 0)
-                s++;
-            else
-                cout << a[i] << " ";
+            ans = max(ans, a[i] - MIN);
+            MIN = min(MIN, a[i]);
         }
-        for (int i = 0; i < s; i++)
-            cout << 0 << " ";
-        cout << endl;
+        if (ans == 0)
+            cout << "-1\n";
+        else
+            cout << ans << "\n";
     }
 
     return 0;

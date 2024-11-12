@@ -13,19 +13,20 @@ signed main()
     cin >> t;
     while (t--)
     {
-        int n, k, x, s = 0;
+        LL n, k;
         cin >> n >> k;
-        for (int i = 0; i < n; i++)
-        {
-            cin >> x;
-            if (x == k)
-                s++;
-        }
-        if (s == 0)
-            cout << -1 << endl;
+
+        int d = n / k;
+        int r = n % k;
+
+        LL ans = 1LL * d * k * (k - 1) / 2 + 1LL * r * (r + 1) / 2;
+
+        if (ans == k)
+            cout << 1 << "\n";
         else
-            cout << s << endl;
+            cout << 0 << "\n";
     }
 
     return 0;
-} /* Take Off Toward Your Dream ! */
+}
+/* Take Off Toward Your Dream ! */

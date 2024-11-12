@@ -15,16 +15,25 @@ signed main()
     {
         int n, k;
         cin >> n >> k;
-        n *= k;
 
-        int a[n];
+        vector<int> a(n);
         for (int i = 0; i < n; i++)
             cin >> a[i];
-        sort(a, a + n);
 
+        deque<int> dq;
         for (int i = 0; i < n; i++)
-            cout << a[i] << " ";
-        cout << endl;
+        {
+            while (!dq.empty() && a[dq.back()] <= a[i])
+                dq.pop_back();
+            dq.push_back(i);
+
+            while (dq.front() + k <= i)
+                dq.pop_front();
+
+            if (i >= k - 1)
+                cout << a[dq.front()] << " ";
+        }
+        cout << "\n";
     }
 
     return 0;
